@@ -1,0 +1,67 @@
+{
+  "name": "angularjs-webpack",
+  "version": "0.0.1",
+  "description": "Base project",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently --kill-others \"webpack-dev-server --host 0.0.0.0\" \"npm run docs\"",
+    "docs_gen": "jsdoc -r -d jsdoc_output/ public/",
+    "docs_watch": "watch \"npm run docs_gen\" public",
+    "docs_serve": "echo Docs are being served on port 8082! && live-server -q --port=8082 --no-browser jsdoc_output/",
+    "docs": "concurrently --kill-others \"npm run docs_serve\" \"npm run docs_watch\"",
+    "format": "prettier --write public/**/*.js",
+    "webpack": "webpack",
+    "test": "mocha-webpack public/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syntony/AngularJS-Webpack.git"
+  },
+  "keywords": [
+    "angularjs",
+    "webpack",
+    "sass",
+    "es6",
+    "es7",
+    "components"
+  ],
+  "author": "Anthony Synenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syntony/AngularJS-Webpack/issues"
+  },
+  "homepage": "https://github.com/syntony/AngularJS-Webpack#readme",
+  "devDependencies": {
+    "@webpack-cli/migrate": "^0.1.9",
+    "angular": "^1.7.x-snapshot",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
+    "concurrently": "^5.1.0",
+    "css-loader": "^3.5.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-angular": "^4.0.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "inject-loader": "^4.0.1",
+    "live-server": "^1.2.0",
+    "mocha": "^7.1.1",
+    "mocha-webpack": "^1.1.0",
+    "node-sass": "^4.5.2",
+    "prettier": "^2.0.4",
+    "raw-loader": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "sinon": "^9.0.2",
+    "style-loader": "^1.1.3",
+    "watch": "^1.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {}
+}
