@@ -1,12 +1,13 @@
 const path = require('path')
 const webpack = require('webpack')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   entry: {
-    index: path.join(__dirname, '/public/index.js'),
+    index: path.join(__dirname, '/public/app.js'),
   },
   output: {
-    filename: '[name]-bundle.js',
+    filename: 'bundle.js',
     path: path.join(__dirname, '/public/'),
     pathinfo: true,
     sourceMapFilename: '[name].js.map',
@@ -43,7 +44,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [new webpack.HotModuleReplacementPlugin(), new Dotenv()],
   devServer: {
     publicPath: '/',
     contentBase: path.join(__dirname, '/public'),
