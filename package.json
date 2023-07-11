@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/syntony/AngularJS-Webpack#readme",
   "devDependencies": {
-    "@webpack-cli/migrate": "^0.1.9",
+    "@webpack-cli/migrate": "^1.1.2",
     "angular": "^1.7.x-snapshot",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^10.1.0",
@@ -52,7 +52,7 @@
     "live-server": "^1.2.0",
     "mocha": "^7.1.1",
     "mocha-webpack": "^1.1.0",
-    "node-sass": "^4.5.2",
+    "node-sass": "^9.0.0",
     "prettier": "^2.0.4",
     "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.2",
