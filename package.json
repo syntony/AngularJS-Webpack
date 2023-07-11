@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/syntony/AngularJS-Webpack#readme",
   "devDependencies": {
-    "@webpack-cli/migrate": "^0.1.9",
+    "@webpack-cli/migrate": "^1.1.2",
     "angular": "^1.7.x-snapshot",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^10.1.0",
